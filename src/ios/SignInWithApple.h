@@ -5,6 +5,8 @@
 #define SignInWithApple_h
 
 @interface SignInWithApple : CDVPlugin
+@property (nonatomic, strong) NSString *callbackId;
+
 - (void)pluginInitialize;
 - (NSArray<ASAuthorizationScope> *)convertScopes:(NSArray<NSNumber *> *)scopes;
 - (void)signin:(CDVInvokedUrlCommand *)command;
